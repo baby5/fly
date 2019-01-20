@@ -1,0 +1,62 @@
+.flex-wrp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.year {
+  margin-left: 38rpx;
+  margin-bottom: 10rpx;
+  font-size: 36rpx;
+}
+
+.date {
+  margin-top: 0rpx;
+  margin-left: 38rpx;
+  margin-bottom: 20rpx;
+  font-size: 46rpx;
+  font-weight: bold;
+}
+
+.weekday {
+  font-size: 28rpx;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+.pink {
+  background: #F9CACA;
+}
+
+.ligthpink {
+  background: #FAECEA;
+}
+
+.front {
+  border-bottom: 2rpx solid;
+  border-right: 2rpx solid;
+}
+
+.last {
+  border-bottom: 2rpx solid;
+}
+
+.buttomFront {
+  border-right: 2rpx solid;
+}
+
+.cell {
+  font-size: 28rpx;
+  height: 146rpx;
+  width: 100%;
+}
+
+.calendar {
+  margin-left: 38rpx;
+  margin-right: 38rpx;
+  border: 1rpx solid;
+  border-radius: 40rpx;
+  display: flex;
+  overflow: hidden;
+}

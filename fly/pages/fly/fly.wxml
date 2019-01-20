@@ -1,0 +1,30 @@
+<view class="year">{{year}}</view>
+<view class="date">{{month}}月{{day}}日</view>
+
+<view class="calendar" style="flex-direction:column;">
+  <view class="flex-wrp" style="flex-direction:row;">
+    <block wx:key="*this" wx:for="{{weekdayNames}}">
+      <view class="weekday last pink" wx:if="{{item === '日'}}">{{item}}</view>
+      <view class="weekday front pink" wx:elif="{{item === '六'}}">{{item}}</view>
+      <view class="weekday front" wx:else>{{item}}</view>
+    </block>
+  </view>
+  <view wx:for="{{calendarRowNums}}" wx:key="*this" wx:for-item="i">
+    <view class="flex-wrp" style="flex-direction:row;">
+      <block wx:if="{{i === 4}}">
+        <block wx:key="*this" wx:for="{{calendarColNums}}" wx:for-item="j">
+          <view class="cell ligthpink" wx:if="{{j === 6}}">{{days[i*7+j]}}</view>
+          <view class="cell buttomFront ligthpink" wx:elif="{{j === 5}}">{{days[i*7+j]}}</view>
+          <view class="cell buttomFront" wx:else>{{days[i*7+j]}}</view>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:key="*this" wx:for="{{calendarColNums}}" wx:for-item="j">
+          <view class="cell last ligthpink" wx:if="{{j === 6}}">{{days[i*7+j]}}</view>
+          <view class="cell front ligthpink" wx:elif="{{j === 5}}">{{days[i*7+j]}}</view>          
+          <view class="cell front" wx:else>{{days[i*7+j]}}</view>
+        </block>
+      </block>
+    </view>
+  </view>
+</view>
